@@ -46,23 +46,6 @@ This document captures the results of executing the test plan for **Breach**. It
 ## 📑 Backend API Test Results  
 
 | ID    | Scenario                                | Expected Result                                      | Actual Result / Observation                        | Status |
-|:-------|:-----------------------------------------|:------------------------------------------------------|:----------------------------------------------------|:---------|
-| B01   | User registration (valid/invalid data)    | [To be filled after test]                            | [ ]                                                | [ ]       |
-| B02   | User login (valid/invalid credentials)    | [ ]                                                  | [ ]                                                | [ ]       |
-| B03   | Fetch posts list                           | [ ]                                                  | [ ]                                                | [ ]       |
-| B04   | Filter posts by category                   | [ ]                                                  | [ ]                                                | [ ]       |
-| B05   | Fetch user profile                          | [ ]                                                  | [ ]                                                | [ ]       |
-| B06   | Update user profile                         | [ ]                                                  | [ ]                                                | [ ]       |
-| B07   | Invalid API token handling                  | [ ]                                                  | [ ]                                                | [ ]       |
-| B08   | Forgot password request                     | [ ]                                                  | [ ]                                                | [ ]       |
-| B09   | Reset password confirmation                 | [ ]                                                  | [ ]                                                | [ ]       |
-| B10   | API response time under load                | [ ]                                                  | [ ]                                                | [ ]       |
-
----
-
-## 📑 Backend API Test Results  
-
-| ID    | Scenario                                | Expected Result                                      | Actual Result / Observation                        | Status |
 |:-------|:-----------------------------------------|:-----------------------------------------------------|:---------------------------------------------------|:-------|
 | B01   | User registration (valid/invalid data)    | User can register with valid and invalid email.    | **Working as expected.** Invalid email can get registered too. | ✅ |
 | B02   | User login (valid/invalid credentials)    | User can log in with valid credentials, invalid credentials flagged.    | **Works as expected.** Invalid credentials get flagged correctly. | ✅ |
@@ -104,16 +87,18 @@ This document captures the results of executing the test plan for **Breach**. It
 
 - ✅ Test Plan  
 - ✅ Frontend Test Execution Report  
-- ⬜ Backend API Test Report (Pending)  
-- ⬜ WebSocket Test Report (Pending)  
+- ✅ Backend API Test Report   
+- ✅ WebSocket Test Report   
 - ✅ Screen recordings  
 - ✅ Screenshots of UI issues  
-- ⬜ Final QA Summary Report  
+- ✅ Final QA Summary Report  
 
 ---
 
-## 📌 Conclusion (Frontend Phase)
+## 📌 Conclusion (Breach)
 
 The frontend test execution exposed several functional and UX issues, particularly in responsiveness, incomplete features, and missing user experience elements (like search, password visibility, and proper logout access). The WebSocket stream works but exhibits an initial connection delay that requires optimization. Backend and WebSocket reconnection tests remain pending for subsequent QA cycles.
+
+The backend test execution confirmed core functionalities like user login, post listing, category filtering, and interest management are working as expected. However, critical gaps were identified in areas such as email validation during registration, unimplemented user profile management, and password recovery flows. Token-based authentication and protected route handling performed reliably. Some error handling requires refinement for clearer feedback. 
 
 ---
