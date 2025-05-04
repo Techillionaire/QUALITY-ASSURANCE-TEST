@@ -17,7 +17,7 @@ This document captures the results of executing the test plan for **Breach**. It
 
 | Test Area       | Total Test Cases | Passed | Failed | Blocked | Not Run |
 |:----------------|:----------------|:--------|:--------|:---------|:----------|
-| **Frontend (Web)**  | 13               | 7      | 6      | 0       | 0        |
+| **Frontend (Web)**  | 13               | 4      | 9      | 0       | 0        |
 | **Backend (API)**   | 10               | [ ]    | [ ]    | [ ]     | [ ]      |
 | **WebSocket**       | 5                | [ ]    | [ ]    | [ ]     | [ ]      |
 

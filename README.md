@@ -10,7 +10,7 @@ This QA evaluation was done to verify the functionality, performance, and UX qua
 ## 🧪 Deliverables
 
 - 📝 Test Plan: [test_plan link](./TEST_PLAN.md)
-- 🧾 Test Documentation: [test_report link](./TEST_REPORT.md)
+- 🧾 Test Documentation: [test_documentation link](./TEST_REPORT.md)
 - 🐞 Bug Tracker (Google Sheet): [View Bug Sheet](https://docs.google.com/spreadsheets/d/1rha1GXg_sRJOkQVP_nvNbKVdVz2j6EScX7aPzl1vCpA/edit?usp=sharing)
 - 🎥 Test Recordings: [Google Drive Folder](https://drive.google.com/drive/folders/your-video-folder-link)
 - 📦 Postman API Tests: [PostmanCollection.json](./PostmanCollection.json)
