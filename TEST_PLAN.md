@@ -32,3 +32,53 @@ This test plan outlines the strategy, scope, objectives, resources, schedule, an
 - Backend API: [https://breach-api.qa.mvm-tech.xyz/swagger/](https://breach-api.qa.mvm-tech.xyz/swagger/)
 - WebSocket: `wss://breach-api-ws.qa.mvm-tech.xyz`
 
+## 5️⃣ Test Scenarios  
+
+| ID    | Test Scenario                                                  | Priority |
+|:------|:---------------------------------------------------------------|:----------|
+| TS01  | User registration with valid/invalid inputs                    | High |
+| TS02  | User login with valid/invalid credentials                      | High |
+| TS03  | Fetch and display list of posts                                | High |
+| TS04  | Filter posts by category                                       | Medium |
+| TS05  | User selects topics of interest during onboarding              | Medium |
+| TS06  | Stream and display recent 5 events via WebSocket               | High |
+| TS07  | Responsive design test on various screen sizes                 | Medium |
+| TS08  | API error handling validation                                  | High |
+| TS09  | Load and stress test for concurrent API calls                  | Medium |
+| TS10  | Password reset & forgot password flow                          | High |
+| TS11  | User profile update (username, bio, profile picture)           | Medium |
+| TS12  | Invalid API token / unauthorized request handling              | High |
+| TS13  | API response time monitoring under normal & heavy load         | Medium |
+| TS14  | WebSocket reconnect logic (simulate network disconnects)       | Medium |
+| TS15  | Cross-browser compatibility test (Chrome, Edge, Safari)        | Medium |
+| TS16  | Error messaging clarity & consistency across app               | Medium |
+| TS17  | Search functionality within posts (if available)               | Medium |
+| TS18  | Pagination or infinite scroll behavior in post listing         | Medium |
+| TS19  | Session management — auto logout on token expiry               | Medium |
+| TS20  | User logout flow                                               | High |
+
+## 6️⃣ Entry & Exit Criteria
+
+### ✅ Entry Criteria
+- Test environments (frontend, backend, WebSocket) are accessible and stable.
+- Design files (Figma) are available and aligned with current implementation.
+- All required endpoints are documented and accessible via Swagger.
+- Authentication mechanism (login/registration) is operational.
+- Test data (e.g., user credentials, post categories) is prepared or mock data is seeded.
+- Tools for test execution (Postman, JMeter, browser tools) are installed and configured.
+
+### ✅ Exit Criteria
+
+## 7️⃣ Test Deliverables  
+- Test Plan (this document)
+- Test Cases (if required separately)
+- Test Execution Report  
+- Bug Report (Google Sheets link)
+- Screen recordings of test sessions (Google Drive link)
+- Final summary in README (GitHub)
+
+## 8️⃣ Expected Outcome  
+- No unresolved critical bugs in production.  
+- Smooth, intuitive, and responsive UI/UX.  
+- Accurate data exchange via APIs.  
+- Stable, real-time WebSocket events under concurrent loads.
