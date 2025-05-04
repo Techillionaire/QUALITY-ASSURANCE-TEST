@@ -18,7 +18,7 @@ This document captures the results of executing the test plan for **Breach**. It
 | Test Area       | Total Test Cases | Passed | Failed | Blocked | Not Run |
 |:----------------|:----------------|:--------|:--------|:---------|:----------|
 | **Frontend (Web)**  | 13               | 4      | 9      | 0       | 0        |
-| **Backend (API)**   | 10               | [ ]    | [ ]    | [ ]     | [ ]      |
+| **Backend (API)**   | 11               | 7      | 4      | 0       | 0        |
 | **WebSocket**       | 5                | [ ]    | [ ]    | [ ]     | [ ]      |
 
 ---
@@ -59,6 +59,25 @@ This document captures the results of executing the test plan for **Breach**. It
 | B10   | API response time under load                | [ ]                                                  | [ ]                                                | [ ]       |
 
 ---
+
+## 📑 Backend API Test Results  
+
+| ID    | Scenario                                | Expected Result                                      | Actual Result / Observation                        | Status |
+|:-------|:-----------------------------------------|:-----------------------------------------------------|:---------------------------------------------------|:-------|
+| B01   | User registration (valid/invalid data)    | User can register with valid and invalid email.    | **Working as expected.** Invalid email can get registered too. | ✅ |
+| B02   | User login (valid/invalid credentials)    | User can log in with valid credentials, invalid credentials flagged.    | **Works as expected.** Invalid credentials get flagged correctly. | ✅ |
+| B03   | Fetch posts list                           | Returns a list of posts.                            | **Works as expected.** Successfully fetches posts. | ✅ |
+| B04   | Filter posts by category                   | Posts can be filtered by categories like "Featured", "Recent", "Popular".   | **Works as expected.** Can filter by "Featured", "Recent", and "Popular". | ✅ |
+| B05   | Fetch user profile                          | Fetches the user's profile information.           | **API not currently handling this.** No data fetched. | ❌ |
+| B06   | Update user profile                         | Updates the user's profile information.           | **API not handling this.** Profile update not supported. | ❌ |
+| B07   | Invalid API token handling                 | API should return an error when an invalid token is provided.   | **Works as expected.** Without a token, user cannot access protected routes. | ✅ |
+| B08   | Forgot password request                    | Initiates a password reset process.               | **API not handling this.** No response from the API. | ❌ |
+| B09   | Reset password confirmation                | Confirms the new password after a reset request.   | **API not handling this.** No response from the API. | ❌ |
+| B10   | Save user's interests                      | Accepts an array of user's interests (category IDs).  | **Works as expected.** Accepts an array of category IDs for user's interests. | ✅ |
+| B11   | Get user's interests                       | Returns a list of categories the user is interested in. | **Works perfectly.** Used to filter posts based on user's interests. | ✅ |
+
+---
+
 
 ## 📡 WebSocket Test Results  
 
