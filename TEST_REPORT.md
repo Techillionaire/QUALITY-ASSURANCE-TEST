@@ -9,7 +9,7 @@
 
 ## 📋 Overview
 
-This document captures the results of executing the test plan for the **Breach Application**. It covers test cases executed against the **Frontend (Web)**, with placeholders for **Backend API** and **WebSocket** tests.
+This document captures the results of executing the test plan for **Breach**. It covers test cases executed against the **Frontend (Web)**, **Backend API** and **WebSocket** tests.
 
 ---
 
