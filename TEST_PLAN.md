@@ -67,7 +67,13 @@ This test plan outlines the strategy, scope, objectives, resources, schedule, an
 - Test data (e.g., user credentials, post categories) is prepared or mock data is seeded.
 - Tools for test execution (Postman, JMeter, browser tools) are installed and configured.
 
-### ✅ Exit Criteria
+### 📌 Exit Criteria
+- All planned test cases (Frontend, Backend, WebSocket) executed.
+- All identified bugs and issues documented in the Bug Tracker.
+- Test Plan, Test Results, and Bug Reports completed and shared.
+- No fixes applied yet; defects pending resolution.
+- Test environments remain stable for retesting.
+- All documentation delivered to the development team.
 
 ## 7️⃣ Test Deliverables  
 - Test Plan 
