@@ -1,4 +1,4 @@
-# ✅ Breach App QA Report
+# ✅ Breach QA Report
 
 This repository contains the complete QA test artifacts for Breach.
 
