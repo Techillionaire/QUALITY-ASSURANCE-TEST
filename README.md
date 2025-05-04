@@ -1,16 +1,16 @@
 # ✅ Breach App QA Report
 
-This repository contains the complete QA test artifacts for the Breach App.
+This repository contains the complete QA test artifacts for Breach.
 
 ## 🔎 Overview
-This QA evaluation was done to verify the functionality, performance, and UX quality of the Breach App, which includes features like user registration, login, onboarding, blog posts, filters, and real-time news event streaming via WebSocket.
+This QA evaluation was done to verify the functionality, performance, and UX quality of Breach, which includes features like user registration, login, onboarding, blog posts, filters, and real-time news event streaming via WebSocket.
 
 ---
 
 ## 🧪 Deliverables
 
-- 📝 Test Plan: [TestPlan.md](./TEST_PLAN.md)
-- 🧾 Test Documentation: [TestDocumentation.md](./TEST_REPORT.md)
+- 📝 Test Plan: [test_plan link](./TEST_PLAN.md)
+- 🧾 Test Documentation: [test_report link](./TEST_REPORT.md)
 - 🐞 Bug Tracker (Google Sheet): [View Bug Sheet](https://docs.google.com/spreadsheets/d/your-bug-sheet-link)
 - 🎥 Test Recordings: [Google Drive Folder](https://drive.google.com/drive/folders/your-video-folder-link)
 - 📦 Postman API Tests: [PostmanCollection.json](./PostmanCollection.json)
