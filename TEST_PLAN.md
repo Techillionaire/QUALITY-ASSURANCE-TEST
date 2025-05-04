@@ -52,7 +52,7 @@ This test plan outlines the strategy, scope, objectives, resources, schedule, an
 | TS14  | WebSocket reconnect logic (simulate network disconnects)       | Medium |
 | TS15  | Cross-browser compatibility test (Chrome, Edge, Safari)        | Medium |
 | TS16  | Error messaging clarity & consistency across app               | Medium |
-| TS17  | Search functionality within posts (if available)               | Medium |
+| TS17  | Search functionality within posts                              | Medium |
 | TS18  | Pagination or infinite scroll behavior in post listing         | Medium |
 | TS19  | Session management — auto logout on token expiry               | Medium |
 | TS20  | User logout flow                                               | High |
@@ -70,12 +70,12 @@ This test plan outlines the strategy, scope, objectives, resources, schedule, an
 ### ✅ Exit Criteria
 
 ## 7️⃣ Test Deliverables  
-- Test Plan (this document)
-- Test Cases (if required separately)
+- Test Plan 
 - Test Execution Report  
-- Bug Report (Google Sheets link)
-- Screen recordings of test sessions (Google Drive link)
-- Final summary in README (GitHub)
+- Bug Report
+- Screen recordings of test sessions
+- Screenshots of test sessions
+- Final summary in README
 
 ## 8️⃣ Expected Outcome  
 - No unresolved critical bugs in production.  
