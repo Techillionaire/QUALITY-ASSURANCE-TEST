@@ -20,10 +20,10 @@ This test plan outlines the strategy, scope, objectives, resources, schedule, an
 | Tool               | Purpose                             |
 |:-------------------|:------------------------------------|
 | Postman            | API and WebSocket testing           |
-| Loom               | Screen recording                    |
+| Sniping tool       | Screen recording                    |
 | Google Sheets      | Bug tracking and reporting          |
 | Chrome DevTools    | Responsive and frontend debugging   |
-| JMeter             | Load and stress testing             |
+| Artilery           | Load and stress testing             |
 | VS Code            | Test documentation (Markdown)       |
 | GitHub             | Final deliverable repository        |
 

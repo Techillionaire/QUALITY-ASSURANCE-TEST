@@ -1,0 +1,57 @@
+config:
+  target: "https://breach-api.qa.mvm-tech.xyz"
+  phases:
+    - duration: 60   # seconds
+      arrivalRate: 20  # 20 users per second
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "Register User"
+    flow:
+      - post:
+          url: "/api/auth/register"
+          json:
+            email: "testuser123+{{ $randomNumber(1000, 9999) }}@example.com"
+            password: "testpass123"
+
+  - name: "Login User"
+    flow:
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "testuser123@example.com"
+            password: "testpass123"
+          capture:
+            json: "$.token"
+            as: "authToken"
+
+  - name: "Get All Blog Posts"
+    flow:
+      - get:
+          url: "/api/blog/posts"
+
+  - name: "Get Categories"
+    flow:
+      - get:
+          url: "/api/blog/categories"
+
+  - name: "Save User Interests"
+    flow:
+      - post:
+          url: "/api/users/{id}/interests"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            interests:
+              - 1
+              - 2
+              - 3
+
+  - name: "Get User Interests"
+    flow:
+      - get:
+          url: "/api/users/{id}/interests"
+          headers:
+            Authorization: "Bearer {{ authToken }}"

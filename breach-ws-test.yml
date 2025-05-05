@@ -1,0 +1,33 @@
+config:
+  target: "https://breach-api.qa.mvm-tech.xyz"
+  phases:
+    - duration: 30
+      arrivalRate: 10
+  processor: "./functions.js"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "Login and Connect to WebSocket"
+    flow:
+      # Login API call
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "testuser123@example.com"
+            password: "testpass123"
+          capture:
+            json: "$.token"
+            as: "authToken"
+
+      # Connect to WebSocket using captured token
+      - ws:
+          connect: "wss://breach-api-ws.qa.mvm-tech.xyz"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          onConnected:
+            - send: '{"event":"subscribe","token":"{{ authToken }}"}'
+            - think: 5
+            - send: '{"event":"message","data":"Hello from artillery"}'
+            - think: 5

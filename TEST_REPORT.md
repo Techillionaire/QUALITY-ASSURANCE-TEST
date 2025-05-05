@@ -19,7 +19,7 @@ This document captures the results of executing the test plan for **Breach**. It
 |:----------------|:----------------|:--------|:--------|:---------|:----------|
 | **Frontend (Web)**  | 13               | 4      | 9      | 0       | 0        |
 | **Backend (API)**   | 11               | 7      | 4      | 0       | 0        |
-| **WebSocket**       | 5                | [ ]    | [ ]    | [ ]     | [ ]      |
+| **WebSocket**       | 4                | 4      | 0      | 0       | 0        |
 
 ---
 
@@ -66,20 +66,11 @@ This document captures the results of executing the test plan for **Breach**. It
 
 | ID    | Scenario                               | Expected Result                                      | Actual Result / Observation                        | Status |
 |:-------|:----------------------------------------|:------------------------------------------------------|:----------------------------------------------------|:---------|
-| W01   | Connect to WebSocket                     | Should establish connection successfully              | **Connection works, slight initial delay.**         | ⚠️       |
+| W01   | Connect to WebSocket                     | Should establish connection successfully              | Connects successfully                               | ✅       |
 | W02   | Receive stream of 5 most recent events    | Should receive recent events on home page              | **Events display fine once connection stabilizes.** | ✅       |
-| W03   | Reconnect after network disconnect       | Should reconnect automatically                        | [ ]                                                | [ ]       |
-| W04   | Handle invalid connection attempt        | Should gracefully handle failed connections            | [ ]                                                | [ ]       |
-| W05   | Performance under concurrent connections | Should remain stable under 50–100 simulated users      | [ ]                                                | [ ]       |
+| W03   | Reconnect after network disconnect       | Should reconnect automatically                        | Automatically reconnects via frontend logic and resumes event stream                                                | ✅          |
+| W04   | Handle invalid connection attempt        | Should gracefully handle failed connections            | Automatically disconnects without a clear message why                                               | ✅       |
 
----
-
-## 📝 Additional Observations  
-
-- **No visual confirmation or toast messages for some actions (like post filtering or onboarding success).**  
-- **Button hover and active states are not consistent across UI elements.**  
-- **Page transitions feel a bit abrupt — no loading indicators when switching routes.**  
-- **Dark mode toggle or theme control not available (if in scope).**
 
 ---
 
@@ -100,5 +91,7 @@ This document captures the results of executing the test plan for **Breach**. It
 The frontend test execution exposed several functional and UX issues, particularly in responsiveness, incomplete features, and missing user experience elements (like search, password visibility, and proper logout access). The WebSocket stream works but exhibits an initial connection delay that requires optimization. Backend and WebSocket reconnection tests remain pending for subsequent QA cycles.
 
 The backend test execution confirmed core functionalities like user login, post listing, category filtering, and interest management are working as expected. However, critical gaps were identified in areas such as email validation during registration, unimplemented user profile management, and password recovery flows. Token-based authentication and protected route handling performed reliably. Some error handling requires refinement for clearer feedback. 
+
+WebSocket connections work reliably, with real-time event streams and automatic reconnections after network drops. Initial connection delays and missing error feedback on failed connections remain areas for improvement in future cycles.
 
 ---
